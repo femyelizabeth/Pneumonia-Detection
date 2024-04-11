@@ -1,0 +1,233 @@
+/* Base body styles */
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Container for the upload form */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Styling for file input */
+.input-container {
+    margin-bottom: 20px;
+}
+
+.file-label {
+    background-color: #680763;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Button styling */
+.button {
+    background-color: #680763;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Remove underline */
+}
+
+.button:hover {
+    background-color: #a13ce4;
+}
+
+
+/* Hidden preview image */
+#imageContainer {
+    display: none;
+}
+
+/* Adjust the dimensions of the image preview */
+.image-preview {
+    max-width: 400px; /* Set maximum width */
+    max-height: 400px; /* Set maximum height */
+    overflow: hidden; /* Hide overflow if image is larger */
+    margin: 0 auto; /* Center the image horizontally */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+.image-preview img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.model-title-box {
+    text-align: center; /* Center the title */
+    margin-bottom: 20px; /* Add some spacing below the title */
+}
+
+.model-title-box h1 {
+    color: #f4f1f1; /* Change text color */
+    background-color: rgba(19, 130, 182, 0.5); /* Semi-transparent background */
+    padding: 10px 20px; /* Add padding to the title */
+    border-radius: 5px; /* Add border radius */
+}
+
+
+.result-box {
+    max-width: 800px; /* Adjust the maximum width */
+    margin: 20px auto; /* Center the box horizontally */
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent background color */
+    padding: 40px; /* Adjust padding inside the box */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    font-size: 20px; /* Adjust font size */
+    text-align: center; /* Center text */
+}
+
+
+
+
+/* Additional styles for homepage */
+.homepage-container {
+    background-image: url('https://cdn-aekfi.nitrocdn.com/BhHUnZmQXkWPzBaLMaTftVhEvszyNTtP/assets/images/source/rev-8874fde/www.timedoctor.com/blog/images/2019/10/healthcare-bpo-1536x1024.jpg.webp');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.homepage-content {
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-name {
+    font-family: 'Comic Sans MS', cursive; /* Change font family */
+    font-size: 48px; /* Increase font size */
+    animation: pulse 2s infinite; /* Add pulse animation */
+    color: #13aeb6; /* Set initial font color */
+    margin-bottom: 30px; /* Add margin to separate from other content */
+    font-weight: bold; /* Make font bold */
+}
+
+/* Define pulse animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        color: #13aeb6; /* Set initial and final font color */
+    }
+    50% {
+        transform: scale(1.1);
+        color: #1382b6; /* Change font color for the middle of the animation */
+    }
+}
+
+.info-box p {
+    text-align: justify;
+}
+
+
+
+/* Additional styles for info-box */
+.info-box {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Adjust the maximum width as needed */
+}
+
+
+/* Additional styles for model select container */
+.model-select-container {
+    background-image: url('https://csform.com/wp-content/uploads/2019/02/Healthcare-App-UI-Kits-2019.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.model-select-box {
+    max-width: 600px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.model-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .model-select-box {
+        padding: 20px;
+    }
+}
+
+/* Background for the upload page */
+.upload-page-background {
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230412/pngtree-medical-blue-medical-equipment-background-image_2363148.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Background for the result page */
+.result-page-background {
+    background-image: url('https://plus.unsplash.com/premium_photo-1661607095917-e5a91a6c1afc?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpbGQlMjBkb2N0b3J8ZW58MHx8MHx8fDA%3D');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.go-back-button {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+}
+
+.go-back-button button {
+    background-color: #1382b6; /* Example button color */
+    color: #ffffff; /* Example text color */
+}
+
