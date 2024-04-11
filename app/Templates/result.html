@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="result-page-background">
+    <div class="result-box">
+        <h1>Prediction Result</h1>
+        <p>Uploaded Image: {{ filename }}</p>
+        <p class="result">Prediction: {{ prediction }}</p>
+        <!-- Display Confidence Score -->
+        <p class="confidence">Confidence: {{ confidence }}%</p>
+        <a href="/model_select" class="button">Select Another Model</a> <!-- Link to model_select route -->
+        <a href="/upload" class="button">Upload Another Image</a> <!-- Link to upload route -->
+        <a href="/" class="button">Go Back to Home</a> <!-- Link to home page -->
+    </div>
+</body>
+</html>

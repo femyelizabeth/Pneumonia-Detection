@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload X-ray Image</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="upload-page-background">
+    <div class="container upload-container">
+        <div class="upload-box">
+            <h1>Upload X-ray Image for {{ model }}</h1>
+            <form action="/predict" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="model" value="{{ model }}">
+                <input type="file" name="file" id="imageInput" accept="image/*" required>
+                <div id="imageContainer"></div>
+                <div id="previewContainer" class="image-preview"></div>
+                <input type="submit" value="Predict" class="button">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function displayImage(input) {
+            var file = input.files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    var imageData = e.target.result;
+                    document.getElementById('imageContainer').innerHTML = '<img src="' + imageData + '" id="uploadedImage">';
+                    document.getElementById('previewContainer').innerHTML = '<img src="' + imageData + '" id="previewImage">';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        document.getElementById('imageInput').addEventListener('change', function() {
+            displayImage(this);
+        });
+    </script>
+</body>
+</html>

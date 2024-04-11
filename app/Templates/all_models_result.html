@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Models Prediction Result</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="result-page-background">
+    <div class="result-box">
+        <h1>All Models Prediction Result</h1>
+        <p>Uploaded Image: {{ filename }}</p>
+        <div class="result-prediction-box">
+            <h2>Result Prediction</h2>
+            <table>
+                <tr>
+                    <th>Model</th>
+                    <th>Prediction</th>
+                    <th>Confidence (%)</th>
+                </tr>
+                {% for model, result in results.items() %}
+                <tr>
+                    <td>{{ model }}</td>
+                    <td>{{ result.prediction }}</td>
+                    <td>{{ result.confidence }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="buttons-section">
+            <a href="/model_select" class="button">Select Another Model</a>
+            <a href="/all_models_upload" class="button">Upload Another Image</a>
+            <a href="/" class="button">Go Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

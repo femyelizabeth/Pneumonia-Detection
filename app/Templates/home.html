@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-G2l04FU03G9jNNs9wXvfTvNkRvoVV+B0PBM8GPw+L2WvdlRu6Vh76Ab1PUpSUNnK3uG1xegQxKVQtrKdMcKY6g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="homepage-container">
+        <!-- Project Name -->
+        <div class="project-name">PNEUMOGEANYAI</div>
+
+        <!-- What is Pneumonia? -->
+        <div class="info-box">
+            <h2><i class="fas fa-info-circle icon"></i> What is Pneumonia?</h2>
+            <p>Pneumonia is an infection that inflames the air sacs in one or both lungs. The air sacs may fill with fluid or pus, causing cough with phlegm or pus, fever, chills, and difficulty breathing. A variety of organisms, including bacteria, viruses and fungi, can cause pneumonia.</p>
+        </div>
+        
+        <!-- Consequences of Pneumonia -->
+        <div class="info-box">
+            <h2><i class="fas fa-exclamation-triangle icon"></i> What are the consequences of Pneumonia?</h2>
+            <p>Pneumonia can range in seriousness from mild to life-threatening. It is most serious for infants and young children, people older than age 65, and people with health problems or weakened immune systems.</p>
+        </div>
+        
+        <!-- Box about how doctors detect pneumonia from chest X-rays -->
+        <div class="info-box">
+            <h2><i class="fas fa-user-md icon"></i> How do doctors detect pneumonia from chest X-rays?</h2>
+            <p>Doctors use chest X-rays, also known as chest radiographs, as a primary tool for diagnosing pneumonia. Here's how they interpret these images:</p>
+            <ul>
+                <li><p>Identification of infiltrates or opacities in the lungs, which may indicate the presence of pneumonia.</p></li>
+                <li><p>Assessment of the location and extent of lung involvement to determine the severity of the infection.</p></li>
+                <li><p>Comparison with previous X-rays to monitor changes in lung appearance over time.</p></li>
+                <li><p>Recognition of specific patterns associated with different types of pneumonia, such as lobar pneumonia, bronchopneumonia, or interstitial pneumonia.</p></li>
+                <li><p>Consultation with radiologists for detailed analysis and confirmation of findings.</p></li>
+            </ul>
+        </div>
+
+        <!-- Button for Uploading X-ray Image -->
+        <div class="info-box button-box">
+            <i class="fas fa-cloud-upload-alt icon"></i> <button class="button" onclick="window.location.href='/model_select'">Pneumonia Detection</button>
+        </div>
+    </div>
+</body>
+</html>

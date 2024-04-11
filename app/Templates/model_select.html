@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Model</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="model-select-container">
+        <h1>Select Model</h1>
+        <div class="model-select-box">
+            <h2>Select a model for pneumonia detection:</h2>
+            <div class="model-buttons">
+                <form action="/inception_upload" method="get">
+                    <button class="button" type="submit" name="model" value="Inception V3">Inception V3</button>
+                </form>
+                <form action="/vgg16_upload" method="get">
+                    <button class="button" type="submit" name="model" value="VGG-16">VGG-16</button>
+                </form>
+                <form action="/resnet50_upload" method="get">
+                    <button class="button" type="submit" name="model" value="ResNet-50">ResNet-50</button>
+                </form>
+                <form action="/all_models_upload" method="get">
+                    <button class="button" type="submit" name="model" value="All Models">All Models</button>
+                </form>
+            </div>
+        </div>
+        <!-- Go back to home page button -->
+        <form action="/" method="get" class="go-back-button">
+            <button class="button" type="submit">Go Back to Home</button>
+        </form>
+    </div>
+</body>
+</html>
