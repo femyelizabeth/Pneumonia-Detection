@@ -44,12 +44,26 @@ body {
     font-size: 16px;
     transition: background-color 0.3s ease;
     text-decoration: none; /* Remove underline */
+    
 }
+
+.model-buttons .button{
+    margin-bottom: 10px;
+}
+
 
 .button:hover {
     background-color: #a13ce4;
 }
 
+.model-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.model-buttons .button:last-child{
+    margin-bottom: 10px;
+}
 
 /* Hidden preview image */
 #imageContainer {
@@ -231,3 +245,45 @@ body {
     color: #ffffff; /* Example text color */
 }
 
+/* Add this CSS to your styles.css file */
+
+/* Styling for Result Prediction Box */
+.result-prediction-box {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Set background color */
+    padding: 20px; /* Add padding to the box */
+    border-radius: 10px; /* Add border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+
+.result-prediction-box h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.result-prediction-box table {
+    width: 100%; /* Set table width to 100% */
+    border-collapse: collapse;
+}
+
+.result-prediction-box th, .result-prediction-box td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.result-prediction-box th {
+    background-color: #f2f2f2;
+}
+
+/* Styling for Buttons Section */
+.buttons-section {
+    margin-top: 20px;
+    text-align: center; /* Center align the buttons */
+}
+
+.buttons-section .button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-decoration: none; /* Remove underline */
+}
