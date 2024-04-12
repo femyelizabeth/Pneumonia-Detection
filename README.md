@@ -31,7 +31,7 @@ Weighted Classification: Combining predictions from various models to enhance ac
 ### Data
 The dataset used can be found on Kaggle, consisting of training, testing, and validation subsets categorized into PNEUMONIA and NORMAL classes. 
 This dataset is crucial for training and evaluating the performance of our models.
-
+[Download Training Dataset from Kaggle](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
 ## Installation
 
